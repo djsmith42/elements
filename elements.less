@@ -24,6 +24,7 @@
   background: -moz-linear-gradient(center bottom,
                                    @start 0%,
                                    @stop 100%);
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@stop,@start)); // IE9 and down
 }
 .bw-gradient(@color: #F5F5F5, @start: 0, @stop: 255) {
   background: @color;
@@ -38,6 +39,7 @@
   background: -moz-linear-gradient(center bottom,
                                    rgb(@start,@start,@start) 0%,
                                    rgb(@stop,@stop,@stop) 100%);
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",rgb(@stop,@stop,@stop),rgb(@start,@start,@start))); // IE9 and down
 }
 .bordered(@top-color: #EEE, @right-color: #EEE, @bottom-color: #EEE, @left-color: #EEE) {
   border-top: solid 1px @top-color;
